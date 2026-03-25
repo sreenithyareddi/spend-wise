@@ -32,6 +32,7 @@ get('setBudgetBtn').onclick = function() {
     if (val <= 0) return alert("Enter valid amount");
     limit = val;
     update();
+    limitInput.value = "";
 };
 get('expenseForm').onsubmit = function(e) {
     e.preventDefault();
