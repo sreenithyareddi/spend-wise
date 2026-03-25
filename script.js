@@ -21,6 +21,7 @@ get('simpleLogin').onsubmit = function(e) {
     user.textContent = "Welcome, " + name;
     auth.classList.add('hidden');
     app.classList.remove('hidden');
+    get('username').value = "";
 };
 get('logoutBtn').onclick = function() {
     sessionStorage.clear();
@@ -40,6 +41,8 @@ get('expenseForm').onsubmit = function(e) {
     expenses.unshift({ name, amt, time: new Date() });
     spent += amt;
     update();
+    get('expenseName').value = "";
+    get('expenseAmount').value = "";
 };
 function update() {
     let safe = limit - spent;
