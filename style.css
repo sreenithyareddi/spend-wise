@@ -1,0 +1,227 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+body{
+    font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;
+    background:linear-gradient(135deg,#0f0c29,#302b63,#24243e);
+    min-height:100vh;
+    color:#fff;
+}
+.auth-container{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:20px;
+}
+.auth-card{
+    background:rgba(15,12,41,0.8);
+    border-radius:25px;
+    box-shadow:0 25px 50px rgba(0,0,0,0.3);
+    padding:40px;
+    width:100%;
+    max-width:450px;
+}
+.auth-header{
+    text-align:center;
+    margin-bottom:30px;
+}
+.auth-title{
+    font-size:2.5rem;
+    margin-bottom:10px;
+    color:#667eea;
+}
+.auth-subtitle{
+    color:rgba(255,255,255,0.7);
+}
+.auth-form{
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+}
+.container{
+    max-width:1400px;
+    margin:auto;
+    padding:20px;
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+}
+.header{
+    margin-bottom:40px;
+}
+.header-content{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:rgba(15,12,41,0.6);
+    padding:20px 30px;
+    border-radius:15px;
+}
+.title{
+    font-size:3rem;
+}
+.subtitle{
+    font-size:1.2rem;
+}
+.logout-btn{
+    padding:8px 16px;
+    border-radius:8px;
+    background:rgba(255,255,255,0.1);
+    color:white;
+    cursor:pointer;
+}
+.glass-card{
+    background:rgba(15,12,41,0.8);
+    border-radius:20px;
+    box-shadow:0 8px 32px rgba(0,0,0,0.3);
+    padding:30px;
+}
+.glass-card h2{
+    margin-bottom:20px;
+    font-size:1.5rem;
+}
+.main-content{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:30px;
+    flex:1;
+}
+.budget-limit-section,
+.transactions-section{
+    grid-column:1/-1;
+}
+.budget-tank-section{
+    grid-column:1;
+}
+.add-expense-section{
+    grid-column:2;
+}
+.input-group{
+    margin-bottom:20px;
+}
+.input-group label{
+    display:block;
+    margin-bottom:8px;
+}
+.input-group input{
+    width:100%;
+    padding:12px;
+    border-radius:10px;
+    background:rgba(255,255,255,0.05);
+    color:white;
+    border:1px solid rgba(255,255,255,0.2);
+}
+.input-group input::placeholder{
+    color:rgba(255,255,255,0.6);
+}
+button{
+    padding:12px;
+    border:none;
+    border-radius:10px;
+    background:linear-gradient(135deg,#667eea,#764ba2);
+    color:white;
+    cursor:pointer;
+}
+#setBudgetBtn,
+.add-expense-btn{
+    width:100%;
+    margin-top:10px;
+}
+.budget-tank-container{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin:30px 0;
+    gap:20px;
+}
+.budget-tank{
+    width:80px;
+    height:200px;
+    border:3px solid rgba(255,255,255,0.3);
+    border-radius:40px;
+    position:relative;
+    overflow:hidden;
+}
+.budget-level{
+    position:absolute;
+    bottom:0;
+    width:100%;
+    background:linear-gradient(180deg,#4CAF50,#45a049);
+}
+.tank-percentage{
+    font-size:2rem;
+    font-weight:bold;
+    text-align:center;
+}
+.budget-summary{
+    display:grid;
+    gap:15px;
+}
+.summary-item{
+    display:flex;
+    justify-content:space-between;
+    padding:15px;
+    background:rgba(255,255,255,0.05);
+    border-radius:10px;
+}
+.safe-to-spend{
+    border:2px solid rgba(76,175,80,0.3);
+}
+.transactions-container{
+    max-height:400px;
+    overflow-y:auto;
+}
+.no-transactions{
+    text-align:center;
+    color:rgba(255,255,255,0.7);
+    padding:40px;
+}
+.transactions-list{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+}
+.transaction-item{
+    display:flex;
+    justify-content:space-between;
+    padding:15px;
+    background:rgba(255,255,255,0.05);
+    border-radius:10px;
+}
+.transaction-item .amount{
+    color:#ff6b6b;
+    font-weight:bold;
+}
+.transaction-item .time{
+    font-size:0.8rem;
+    color:rgba(255,255,255,0.6);
+}
+.footer{
+    text-align:center;
+    margin-top:40px;
+    color:rgba(255,255,255,0.7);
+}
+.hidden{
+    display:none;
+}
+@media(max-width:480px){
+    .container{
+        padding:15px;
+    }
+    .glass-card{
+        padding:20px;
+    }
+    .title{
+        font-size:2rem;
+    }
+    .budget-tank{
+        width:60px;
+        height:150px;
+    }
+    .tank-percentage{
+        font-size:1.5rem;
+    }
+}
